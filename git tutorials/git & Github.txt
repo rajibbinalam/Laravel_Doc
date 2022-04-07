@@ -1,0 +1,39 @@
+------------------------------------Git & Github Command -----------------------------------
+
+1. Commit এর History = git log // git log --oneline(for 1Line info)
+2. Uncommit করার জন্যঃ 
+
+	1. git reset --soft HEAD^ = শুধু লাস্ট commit কে staging এ ফিরিয়ে আনবে।
+	2. git reset HEAD^ = last commit কে working dir এ নিয়ে আশবে।
+	3. git reset --hard HEAD^ = last commit কে Unstaging এ নিয়ে যাবে। (last commit এর আগ পর্যন্ত সব কিছু reset করবে)
+
+
+3. For Commit Details:  git show commit_id / git show HEAD / git show
+
+4. let ৩টা commit আসে(no.1, no.2, no.3): last commit(no.3 is HEAD). no.3থেকে no.1 এ যেতে চাইলে (no.2 & no.3 remove না করে).  git checkout commit_id ( আবার যে কোন commit এ ফিরে যেতে পারব)
+
+5. যে কোন commit থেকে Msater(last) commit এ যেতে >> git checkout master [ checkout is safe]
+
+
+
+
+----------------------------------------- Branch--------------------------------
+
+********* git branch [ ki ki Branch ase Check kora ]
+1. git branch BranchName [ new Branch make kora ]
+2. git checkout BranchName [ master teke new branch e jaoya ]
+3. git branch -d BranchName [ branch Delete kora] (Working Branch Can't be Delete, Move Another & Delete it )
+
+##### SHORTCUT -- git branch -b "BranchName"  -- #############
+
+ if we want to Merge BranchName with Master Branch -------------
+	1. git checkout master
+	2. git merge BranchName
+
+
+
+
+
+
+
+	
