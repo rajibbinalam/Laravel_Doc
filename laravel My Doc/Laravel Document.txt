@@ -48,7 +48,9 @@ $truncated = Str::limit('The quick brown fox jumps over the lazy dog', 20, ' (..
 
 
 
-7. 
+7. Route Multi Parametter :::
+				Route::get('/expert/{id}/{name}', [FrontendExpertAdviceController::class, 'expertsDetails'])->name('frontend.expertsDetails');
+				{{ route('frontend.expertsDetails',['id'=>$data->id,'name'=>$data->name]) }}
 
 
 

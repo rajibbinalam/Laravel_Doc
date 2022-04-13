@@ -1,0 +1,67 @@
+Verify User Email for Access User Dashboard or Somethink:
+
+
+----------------------------------------------- For UI Auth Package ----------------------------
+
+1.  In User Model : class User extends Authenticatable implements MustVerifyEmail
+
+2.  In Web.php(Route) : Auth::routes(['verify' => true]);
+
+3.  In HomeController :     public function __construct()
+    					{
+       					 $this->middleware(['auth', 'verified']);
+    					}
+
+	NB:: যে Controller বা Route, User verify ছাড়া use করতে পারবে না। সে গুলোতে middleware(['auth', 'verified']) বসাও
+		Route::group(); এ middleware ব্যবহার করলেঃ middleware(['auth', 'verified']) কর
+
+
+			======  Result = Check By Mailtrap   =======
+
+-------------------------------------------------     Breeze Auth Package ---------------------------
+
+
+Same of First One. 
+
+
+
+
+========================================================  Another System ====================================
+
+1.  In User Model : class User extends Authenticatable implements MustVerifyEmail
+
+2.  In Web.php(from doc)::    
+
+	1.	  Route::get('/email/verify', function () {
+   		
+			return view('auth.verify-email');
+		})->middleware('auth')->name('verification.notice');
+
+
+	2.    use Illuminate\Foundation\Auth\EmailVerificationRequest;
+ 
+		Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
+    			$request->fulfill();
+ 
+   			 return redirect('/home');
+		})->middleware(['auth', 'signed'])->name('verification.verify');
+
+
+
+	3. 	Route::post('/email/verification-notification', function (Request $request) {
+    			$request->user()->sendEmailVerificationNotification();
+ 
+   			 return back()->with('message', 'Verification link sent!');
+		})->middleware(['auth', 'throttle:6,1'])->name('verification.send');
+
+
+
+	4.  	Route::get('/profile', function () {
+    			// Only verified users may access this route...
+		})->middleware('verified');
+
+	NB:: (4). যে Controller বা Route, User verify ছাড়া use করতে পারবে না। সে গুলোতে middleware(['auth', 'verified']) বসাও
+
+
+
+

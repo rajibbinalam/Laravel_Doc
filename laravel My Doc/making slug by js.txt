@@ -1,0 +1,7 @@
+<script>
+        function mytitle() {
+            var title = document.getElementById("title");
+            var slug = title.value.replace(/\s+/g, '-').toLowerCase()
+            document.getElementById("slug").value = slug;
+        }
+    </script>
