@@ -29,6 +29,13 @@
  if we want to Merge BranchName with Master Branch -------------
 	1. git checkout master
 	2. git merge BranchName
+	3. git pull [ if problem wq: ]
+	4. git add .
+	5. git commit .....
+	6. git push or git push -u origin main
+
+
+
 
 
 
