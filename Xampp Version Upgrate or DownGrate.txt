@@ -1,0 +1,14 @@
+********** Xampp Upgrate or DownGrate Version ***************
+
+1. First Check php Version -- php -v
+2. Stop apache and mysql
+3. open Xampp instalation folder
+4. Rename apache and mysql folder name
+5. Now search on Google for older or upgrate version for php
+6. Download your choosen zip file
+7. Extract it
+8. Open this folder and copy apache and php folder
+9. Past those folder to xampp instalation folder
+10. now Open php folder and edit php.ini file
+11. Find \xampp\ and replace with your xampp location [ F:\xampp\ ]
+12. Now Start apache and mysql on Xampp
