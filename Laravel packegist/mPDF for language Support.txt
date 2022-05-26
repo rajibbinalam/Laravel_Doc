@@ -1,0 +1,7 @@
+https://packagist.org/packages/carlos-meneses/laravel-mpdf
+
+font: Nikosh
+
+For font suport EDIT: ```confige/pdf.php```
+
+'auto_language_detection'    => true,
