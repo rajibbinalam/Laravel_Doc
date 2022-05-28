@@ -1,0 +1,3 @@
+controller/ View: $response = Http::get('https://jsonplaceholder.typicode.com/posts');
+
+view: $response['title'];
