@@ -24,7 +24,7 @@
 				],
 		2. provider => 
 			'admins'=>[
-				'driver=>'eloquent',
+				'driver'=>'eloquent',
 				'model'=> App\Models|Admin::class,
 				],
 
