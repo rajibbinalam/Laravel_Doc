@@ -3,7 +3,8 @@
 __1. Copy-- Commands and stubs Folders__
 
 __2. Copy from-- MigrationServiceProvider.php -> for each module and make Changes __
-	```
+
+	```php
 	/*
          |--------------------------------------------------------------------------
          | ADMIN
@@ -13,9 +14,10 @@ __2. Copy from-- MigrationServiceProvider.php -> for each module and make Change
             base_path().DIRECTORY_SEPARATOR.'module'.DIRECTORY_SEPARATOR.'Admin'.DIRECTORY_SEPARATOR.'database'.DIRECTORY_SEPARATOR.'migrations',
         ]);
 	```
+
 __3. Copy from-- RouteServiceProvider.php -> See the Chnages__
 
-    ```
+    ```php
 	<?php
 
     namespace App\Providers;
@@ -36,7 +38,7 @@ __3. Copy from-- RouteServiceProvider.php -> See the Chnages__
         *
         * @var string
         */
-        //__change_here__
+        __change_here__
         protected $namespace                    = 'App\Http\Controllers';
         protected $admin                        = 'Module\Admin\Controllers'; //Make this For Each Module
         //protected $admin                        = 'Module\Frontend\Controllers'; 
@@ -62,7 +64,7 @@ __3. Copy from-- RouteServiceProvider.php -> See the Chnages__
         * @return void
         */
 
-        //__change_here__
+        __change_here__
         public function boot()
         {
             parent::boot();
@@ -86,7 +88,7 @@ __3. Copy from-- RouteServiceProvider.php -> See the Chnages__
         * @return void
         */
 
-        //__change_here__
+        __change_here__
         public function map()
         {
             $this->mapApiRoutes();
@@ -101,7 +103,7 @@ __3. Copy from-- RouteServiceProvider.php -> See the Chnages__
         *
         * @return void
         */
-        //__change_here__
+        __change_here__
         protected function mapWebRoutes()
         {
             Route::group(['middleware' => 'web'], function () {
@@ -119,7 +121,7 @@ __3. Copy from-- RouteServiceProvider.php -> See the Chnages__
         * @return void
         */
 
-        //__change_here__
+        __change_here__
         protected function mapApiRoutes()
         {
             Route::prefix('api')
@@ -143,13 +145,13 @@ __3. Copy from-- RouteServiceProvider.php -> See the Chnages__
 
 __4. Register The MigrationServiceProvider in Config>app.php__
 
-    ```
+    ```php
     App\Providers\MigrationServiceProvider::class,
     ```
 
 __5. Register View of Modules in Config>View.php__
 
-    ```
+    ```php
     'paths' => [
             resource_path('views'),
 
