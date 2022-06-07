@@ -67,7 +67,7 @@ __3. Copy from-- RouteServiceProvider.php -> See the Chnages__
         __change_here__
         public function boot()
         {
-            parent::boot();		//----- IF View not working Then-> Commend This and Commend out the below Code ------
+            parent::boot();		
             // $this->configureRateLimiting();
 
             // $this->routes(function () {
@@ -114,6 +114,11 @@ __3. Copy from-- RouteServiceProvider.php -> See the Chnages__
 		*/
 		Route::namespace($this->namespace)->group(base_path('routes/web.php'));
 
+		/*
+		|--------------------------------------------------------------------------
+		| MODULE WEB
+		|--------------------------------------------------------------------------
+		*/
                 Route::namespace($this->admin)->group(base_path('module/Admin/routes/web.php')); //Make this For Each Module
                 //Route::namespace($this->frontend)->group(base_path('module/Frontend/routes/web.php'));
                 //Route::namespace($this->hospital)->group(base_path('module/Hospital/routes/web.php'));
