@@ -2,7 +2,7 @@
 
 __1. Copy-- Commands and stubs Folders__
 
-__2. Copy from-- MigrationServiceProvider.php -> for each module and make Changes __
+__2. Copy from-- MigrationServiceProvider.php --> for each module and make Changes__
 
 	```php
 	/*
@@ -67,7 +67,7 @@ __3. Copy from-- RouteServiceProvider.php -> See the Chnages__
         __change_here__
         public function boot()
         {
-            parent::boot();
+            parent::boot();		//----- IF View not working Then-> Commend This and Commend out the below Code ------
             // $this->configureRateLimiting();
 
             // $this->routes(function () {
