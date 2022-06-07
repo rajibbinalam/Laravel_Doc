@@ -172,4 +172,12 @@ __5. Register View of Modules in Config>View.php__
             //base_path('module/Hospital/views'),
         ],
     ```
-
+    
+__6. In Composer.json__
+```
+"psr-4": {
+            "Module\\": "module/",
+            "App\\": "app/"
+        }
+```
+__7. ```  composer dump-autoload ```
