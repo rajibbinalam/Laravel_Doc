@@ -180,4 +180,5 @@ __6. In Composer.json__
             "App\\": "app/"
         }
 ```
-__7. ```  composer dump-autoload ```
+__7. Composer Dup
+```  composer dump-autoload ```
