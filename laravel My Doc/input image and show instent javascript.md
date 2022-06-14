@@ -1,4 +1,5 @@
-------------------------------  Javascript ----------
+__------------------------------  Javascript ----------__
+```Javascript
 var loadFile = function (event) {
     var reader = new FileReader();
     reader.onload = function () {
@@ -7,12 +8,13 @@ var loadFile = function (event) {
     };
     reader.readAsDataURL(event.target.files[0]);
 };
+```
 
 
 
--------------------------------- HTML-----------------------
-
-<div class="form-group col-md-6">
+__-------------------------------- HTML-----------------------__
+```html
+                   <div class="form-group col-md-6">
                         <label class="col-sm-3 control-label text-right logo-text"> Organization Logo<span
                                 class="text-danger">*</span> </label>
                         <div class="col-sm-9">
@@ -24,3 +26,4 @@ var loadFile = function (event) {
                             @enderror
                         </div>
                     </div>
+ ```
