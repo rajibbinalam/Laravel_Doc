@@ -63,4 +63,4 @@ After __updateOrCreate__ of Blog:
                 foreach ($tags ?? [] as $key => $value) {
                     $modelName->tags()->attach($value);
                 }
-                ```
+```
