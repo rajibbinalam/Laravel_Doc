@@ -1,16 +1,23 @@
 
 1. Remove / ignore HTML tag ==
+```
                         {{ strip_tags(htmlspecialchars_decode($contact->address)) }}
-        or   == @php
+```
+or
+```
+	@php
                     echo $contact->address;
                 @endphp
+```
                 
 
 2. Created_at  Time Formate ==
                         {{ $blog_post->created_at->format('d-M-Y') }} 
                         {{ $blog_post->created_at->format('d-M-Y - h:i A') }}  [ format with AM PM ]
+			
+			__Carbon\Carbon::parse($experience->start_year)->format('d-M-Y')  ----> [ for 2010-01-14 or String to time convert ]__
 
-                        Comment Time === {{ $blog_post->created_at->diffForHumans() }} <!-- it'll show: 4 Hours Ago -->
+                        Comment Time === {{ $blog_post->created_at->diffForHumans() }}   <!-- it'll show: 4 Hours Ago -->
 
 
 3. Text Limit ( details ) == 
