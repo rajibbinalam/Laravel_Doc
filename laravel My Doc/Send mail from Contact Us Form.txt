@@ -60,7 +60,7 @@ class Contact extends Mailable
      */
     public function build()
     {
-        return $this->view('backend.email_settings.emails')->with('data');	----------[ Set View , with('data') ]
+        return $this->view('backend.email_settings.emails')->from($this->data['email'])->with('data');	----------[ Set View , with('data') ]
     }
 }
 
