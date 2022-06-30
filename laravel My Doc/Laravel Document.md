@@ -17,6 +17,7 @@ or
 	{{ $blog_post->created_at->format('d-M-Y - h:i A') }}  [ format with AM PM ]
 
 	Carbon\Carbon::parse($experience->start_year)->format('d-M-Y')  ----> [ for 2010-01-14 or String to time convert ]
+	{{  date('d M, Y', strtotime($doctor->DOB)) }}		----------------|^
 
 	Comment Time === {{ $blog_post->created_at->diffForHumans() }}   <!-- it'll show: 4 Hours Ago -->
 ```
