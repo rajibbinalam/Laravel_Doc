@@ -9,10 +9,11 @@
 
 
 3. 
-
+```
  $("#datepicker").datepicker({
             format: "yyyy",
             viewMode: "years",
             minViewMode: "years",
             autoclose: true //to close picker once year is selected
         });
+```
