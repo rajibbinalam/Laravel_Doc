@@ -28,9 +28,10 @@ public static function boot()
             });
         }
     }
-```
     
-__ 2. autometicly update or create Monthly Report when create or update any data of Transactions Table__ (See..  Cable Billing=> TransactionEventTracker )
+```
+
+__2. autometicly update or create Monthly Report when create or update any data of Transactions Table__ (See..  Cable Billing => TransactionEventTracker )
 
 ```
    public static function boot()
@@ -69,5 +70,5 @@ __ 2. autometicly update or create Monthly Report when create or update any data
             });
         }
     }
+    
 ```
-
