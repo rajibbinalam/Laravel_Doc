@@ -70,3 +70,15 @@ return redirect()->route('your route name')->with('Warning','Are you sure you wa
 
 return redirect()->route('your route name')->with('info','This is xyz information');
 ```
+
+	***------------------------  Extra ----------------------***
+			-------------------------------- AJAX
+
+```
+	success: function(res) {
+            toastr.success(res.success);
+          },
+	  error: function(res) {
+            toastr.error(res.error);
+          }
+```
