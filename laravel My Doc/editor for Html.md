@@ -38,3 +38,9 @@
         1. Image On text
         2. Bootstrap 4, 5
         3. table design 
+
+```
+$('#summernote').summernote({
+        height: 400
+    });
+```
