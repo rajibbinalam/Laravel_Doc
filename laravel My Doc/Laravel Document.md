@@ -28,6 +28,9 @@ or
 use Illuminate\Support\Str;
 
 $truncated = Str::limit('The quick brown fox jumps over the lazy dog', 20, ' (...)');
+
+$string = Str::of('Perfectly balanced, as all things should be.')->words(3, ' >>>');
+
 ```
 // The quick brown fox (...)
 
