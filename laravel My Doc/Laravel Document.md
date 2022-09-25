@@ -1,7 +1,9 @@
 
-1. Remove / ignore HTML tag ==
+1. Remove / ignore HTML tags and style ==
 ```
                         {{ strip_tags(htmlspecialchars_decode($contact->address)) }}
+			
+			{!! Str::limit(strip_tags($item->description),80, '') !!}
 ```
 or
 ```
