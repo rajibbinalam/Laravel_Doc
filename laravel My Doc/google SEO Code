@@ -1,35 +1,39 @@
-{{-- SEO START --}}
-    <meta name="description" content="Smart Account is a most user friendly online accounting Software which combines Multi-user easy accounting software for small business. We provided best POS software system in bangladesh. Smart Account is a popular accounting software and simple accounting software. Easy accounting software to help you manage your business, the smart way." />
-    <meta name="keywords" content="accounting software in bangladesh, easy bookkeeping software, online accounting software,  tally erp accounting software, best accounting software in bangladesh, pos software company, pos software free download, online pos software, best pos software, best retail software, online retail software, shop management software in bangladesh, inventory management software, retail management software, accounting voucher software, accounting, inventory software, bquick accounting software, hisab software, smart account">
-    <meta name="title" content="Best Account Management Software In Bangladesh - Smart Account" />
-    <link rel="canonical" href="https://www.smartaccount-bd.com/" />
+
+
+    {{-- SEO START --}}
+    <meta name="description" content="{{ $company->meta_description }}" />
+    <meta name="keywords" content="{{ $company->meta_keyword }} @stack('meta_description')">
+    <meta name="title" content="{{ $company->title }}" />
+    <link rel="canonical" href="{{ url('/') }}" />
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Best Account Management Software In Bangladesh - Smart Account">
-    <meta property="og:description"content="Smart Account is a most user friendly Browser based accounting app which combines Multi-user easy accounting software for small business. This account Software use as offline accounting software, we also provide online accounting services. Smart Account is a popular accounting software and simple accounting software. Easy accounting software to help you manage your business, the smart way.">
-    <meta property="og:url" content="https://www.smartaccount-bd.com/">
-    <meta property="og:site_name" content="Best Account Management Software In Bangladesh">
-    <meta property="og:image" content="https://www.smartaccount-bd.com/public/frontend/images/Smart_Account.png">
-    <meta property="og:image:secure_url" content="https://www.smartaccount-bd.com/public/frontend/images/Smart_Account.png">
-    <meta property="og:image:alt" content="smart account">
+    <meta property="og:title" content="{{ $company->title }}">
+    <meta property="og:description"content="@stack('meta_description') {{ $company->meta_description }}">
+    <meta property="og:url" content="{{ url('/') }}">
+    <meta property="og:site_name" content="{{ $company->title }}">
+
+    <meta property="og:image" content="{{ asset($company->logo) }}">
+    <meta property="og:image:secure_url" content="{{ asset($company->logo) }}">
+    <meta property="og:image:alt" content="{{ $company->title }}">
     <meta property="og:image:type" content="image/png">
-    <meta name="twitter:title" content="Best Account Management Software In Bangladesh - Smart Account">
-    <meta name="twitter:description" content="Smart Account is a most user friendly Browser based accounting app which combines Multi-user easy accounting software for small business. This account Software use as offline accounting software, we also provide online accounting services. Smart Account is a popular accounting software and simple accounting software. Easy accounting software to help you manage your business, the smart way.">
+    @yield('og_image')
+
+    <meta name="twitter:title" content="{{ $company->title }} - {{ $company->name }}">
+    <meta name="twitter:description" content="{{ $company->meta_description }}">
     <meta name="Googlebot" content="all" />
     <meta http-equiv="imagetoolbar" content="yes" />
-    <meta name="Author" content="Smart Account" />
-    <meta name="Copyright" content="Smart Account" />
-    <meta name="owner" content="Smart Account" />
+    <meta name="Author" content="{{ $company->name }}" />
+    <meta name="Copyright" content="{{ $company->name }}" />
+    <meta name="owner" content="{{ $company->name }}" />
     <meta name="Rating" content="General" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta name="distribution" content="Global" />
-    <meta name="classification" content="Software Development, Accounting Software" />
+    <meta name="classification" content="Manufacturing Company" />
     <meta name="robots" content="follow,index" />
     <meta property="og:locale" content="en_US">
-    <meta property="article:publisher" content="https://www.facebook.com/smartaccount/">
+    <meta property="article:publisher" content="{{ url('/') }}">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:creator" content="@SmartAccount6">
     {{-- SEO END  --}}
-
 
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
