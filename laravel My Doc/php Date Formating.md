@@ -1,3 +1,5 @@
+  __ PHP Date Formating __ 
+
 ```
   <?php
     // Assuming today is March 10th, 2001, 5:16:18 pm, and that we are in the
@@ -15,4 +17,12 @@
     $today = date("Y-m-d H:i:s");                   // 2001-03-10 17:16:18 (the MySQL DATETIME format)
   ?>
 
+```
+
+__ Get Last Date of The Month: __
+
+```
+ <?php
+    echo date('Y-m-t');
+ ?>
 ```
