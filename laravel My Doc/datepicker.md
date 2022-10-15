@@ -17,3 +17,11 @@
             autoclose: true //to close picker once year is selected
         });
 ```
+
+__ Get Last Date of The Month: __
+
+```
+ <?php
+    echo date('Y-m-t');
+ ?>
+```
