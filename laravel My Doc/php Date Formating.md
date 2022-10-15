@@ -19,10 +19,9 @@
 
 ```
 
-__ Get Last Date of The Month: __
+__ Get First and Last Date of The Current Month: __
 
 ```
- <?php
-    echo date('Y-m-t');
- ?>
+    $first_day = date('Y-m-01');   $last_day = date('Y-m-t');
+
 ```
