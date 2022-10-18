@@ -19,5 +19,5 @@ __make a blade(html) file to like pdf Page__ :::  (__stream()__)
 
 __SHow Image in PDF __
 ```
-<img src="/backend/img/logo/{{ $companyinfo->Logo }}">
+<img src="backend/img/logo/{{ $companyinfo->Logo }}">
 ```
