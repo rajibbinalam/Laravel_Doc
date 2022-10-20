@@ -14,4 +14,6 @@ __7.__ Laravel Scheduling System
 
 __8.__ Analysis The Schoole Attendence
 
+__9.__ Update status Using Components and Ajax ( See the mcEmblem )
+
 
