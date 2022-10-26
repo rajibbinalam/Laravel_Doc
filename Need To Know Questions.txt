@@ -1,0 +1,2 @@
+
+1. What is e.preventDefault() Exectly Work in Javascript
