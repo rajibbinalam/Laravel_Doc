@@ -1,6 +1,6 @@
 __1.__  if a email logged in with an device then can't login this email with other device at a time in laravel
 
-__2.__  user online status Show
+__2.__  user online status Show ---- ```https://www.itsolutionstuff.com/post/how-to-get-online-users-in-laravelexample.html```
 
 __3.__  Word Restriction In a Comment box i Laravel
 
