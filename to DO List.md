@@ -20,5 +20,11 @@ __10.__ Request Create and Working  ---done
 
 __11.__ Best Practice with Morph Relation
 
+__12.__ Make an Element (Modal) Druggable usign JS: 
+```
 
+https://bootstrapfriendly.com/blog/how-to-make-bootstrap-modal-draggable-and-resizable/
+https://codepen.io/Tnatal/pen/KKKXPwE
+
+```
 
