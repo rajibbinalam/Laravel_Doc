@@ -1,30 +1,42 @@
 <a href="https://uxsolutions.github.io/bootstrap-datepicker/?markup=input&format=&weekStart=&startDate=&endDate=&startView=0&minViewMode=0&maxViewMode=4&todayBtn=false&clearBtn=false&language=en&orientation=auto&multidate=&multidateSeparator=&keyboardNavigation=on&forceParse=on&beforeShowDay=on&beforeShowMonth=on#sandbox">https://uxsolutions.github.io/bootstrap-datepicker/?markup=input&format=&weekStart=&startDate=&endDate=&startView=0&minViewMode=0&maxViewMode=4&todayBtn=false&clearBtn=false&language=en&orientation=auto&multidate=&multidateSeparator=&keyboardNavigation=on&forceParse=on&beforeShowDay=on&beforeShowMonth=on#sandbox</a>
 
-1. 
+
  ```
  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.2.0/css/datepicker.min.css" rel="stylesheet">
 
-```
-2. 
-```
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.2.0/js/bootstrap-datepicker.min.js"></script>
 ```
 
 
-3. 
+__Year, Month, Date Picker__
 ```
- $("#datepicker").datepicker({
+        $("#datepicker").datepicker({
             format: "yyyy",
             viewMode: "years",
             minViewMode: "years",
-            autoclose: true //to close picker once year is selected
+            autoclose: true
+        });
+        
+         $("#datepicker").datepicker({
+            format: "yyyy-mm",
+            viewMode: "months",
+            minViewMode: "months",
+            autoclose: true
+        });
+        
+         $("#datepicker").datepicker({
+            format: "yyyy-mm-dd",
+            viewMode: "yyyy-mm-dd",
+            minViewMode: "yyyy-mm-dd",
+            autoclose: true
         });
 ```
 
-__ Get Last Date of The Month: __
+__Features: __
 
 ```
- <?php
-    echo date('Y-m-t');
- ?>
+date('Y-m-t')     //  Get Last Date of The Month
+
+date('l')     // Day Name of Date Ex: Friday
+
 ```
