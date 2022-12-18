@@ -6,4 +6,4 @@
 git rm -r --cached .
 ```
 
-3.add , commit , push again
+3.add , commit -m "git ignore working now" , push again
