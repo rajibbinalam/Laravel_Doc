@@ -1,15 +1,17 @@
-1. Ck Editor:
+###Ck Editor
 
-2. Tiny Editor: 
+###Tiny Editor
 
-    __ -> Script CDN :__
+###Script CDN
     
-```
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/6.0.3/tinymce.min.js" integrity="sha512-DB4Mu+YChAdaLiuKCybPULuNSoFBZ2flD9vURt7PgU/7pUDnwgZEO+M89GjBLvK9v/NaixpswQtQRPSMRQwYIA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+```html
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/6.0.3/tinymce.min.js"></script>
 ```
 
-    __ ->script :__
-```
+ ###Script
+    
+    
+```javascript
     tinymce.init({
             selector: 'textarea#tinyEditor',
             plugins: [
@@ -30,16 +32,16 @@
         });
 ```
 
-3. Summer Note:
+ ###Summer Note:
 
     __-> Link: https://summernote.org/getting-started/#compiled-css-js __
 
-    __Support : __
+    __Support:__
         1. Image On text
         2. Bootstrap 4, 5
         3. table design 
 
-```
+```javascript
 $('#summernote').summernote({
         placeholder: 'Hello stand alone ui',
         tabsize: 2,
