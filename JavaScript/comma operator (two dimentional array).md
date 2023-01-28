@@ -14,3 +14,5 @@ comma operator allways return last value of operant of comma operator
     console.log("a[" + i + "][" + j + "] = " + a[i][j]);  // run and check
   }
 ```
+
+[Learn More](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comma_Operator)
