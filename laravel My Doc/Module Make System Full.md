@@ -1,10 +1,10 @@
------------Make Module System-------
+## Make Module System-------
 
-__1. Copy-- Commands and stubs Folders__
+#### 1. Copy-- Commands and stubs Folders__
 
-__2. Copy from-- MigrationServiceProvider.php --> for each module and make Changes__
+#### 2. Copy from-- MigrationServiceProvider.php --> for each module and make Changes__
 
-	```php
+```php
 	/*
          |--------------------------------------------------------------------------
          | ADMIN
@@ -13,11 +13,12 @@ __2. Copy from-- MigrationServiceProvider.php --> for each module and make Chang
         $this->loadMigrationsFrom([
             base_path().DIRECTORY_SEPARATOR.'module'.DIRECTORY_SEPARATOR.'Admin'.DIRECTORY_SEPARATOR.'database'.DIRECTORY_SEPARATOR.'migrations',
         ]);
-	```
+	
+```
 
-__3. Copy from-- RouteServiceProvider.php -> See the Chnages__
+#### 3. Copy from-- RouteServiceProvider.php -> See the Chnages__
 
-    ```php
+```php
 	<?php
 
     namespace App\Providers;
@@ -38,7 +39,7 @@ __3. Copy from-- RouteServiceProvider.php -> See the Chnages__
         *
         * @var string
         */
-        __change_here__
+        //_____________________________________________________________________________________change_here
         protected $namespace                    = 'App\Http\Controllers';
         protected $admin                        = 'Module\Admin\Controllers'; //Make this For Each Module
         //protected $admin                        = 'Module\Frontend\Controllers'; 
@@ -64,7 +65,7 @@ __3. Copy from-- RouteServiceProvider.php -> See the Chnages__
         * @return void
         */
 
-        __change_here__
+        //_____________________________________________________________________________________change_here
         public function boot()
         {
             parent::boot();		
@@ -88,7 +89,7 @@ __3. Copy from-- RouteServiceProvider.php -> See the Chnages__
         * @return void
         */
 
-        __change_here__
+        //_____________________________________________________________________________________change_here
         public function map()
         {
             $this->mapApiRoutes();
@@ -103,7 +104,7 @@ __3. Copy from-- RouteServiceProvider.php -> See the Chnages__
         *
         * @return void
         */
-        __change_here__
+        //_____________________________________________________________________________________change_here
         protected function mapWebRoutes()
         {
             Route::group(['middleware' => 'web'], function () {
@@ -133,7 +134,7 @@ __3. Copy from-- RouteServiceProvider.php -> See the Chnages__
         * @return void
         */
 
-        __change_here__
+        //_____________________________________________________________________________________change_here
         protected function mapApiRoutes()
         {
             Route::prefix('api')
@@ -153,17 +154,17 @@ __3. Copy from-- RouteServiceProvider.php -> See the Chnages__
             });
         }
     }
-    ```
+```
 
-__4. Register The MigrationServiceProvider in Config>app.php__
+#### 4. Register The MigrationServiceProvider in Config>app.php
 
-    ```php
+```php
     App\Providers\MigrationServiceProvider::class,
-    ```
+```
 
-__5. Register View of Modules in Config>View.php__
+#### 5. Register View of Modules in Config>View.php
 
-    ```php
+```php
     'paths' => [
             resource_path('views'),
 
@@ -171,14 +172,15 @@ __5. Register View of Modules in Config>View.php__
             //base_path('module/Frontend/views'),
             //base_path('module/Hospital/views'),
         ],
-    ```
-    
-__6. In Composer.json__
 ```
-"psr-4": {
+    
+#### 6. In Composer.json
+
+```
+	"psr-4": {
             "Module\\": "module/",
             "App\\": "app/"
         }
 ```
-__7. Composer Dup
+#### 7. Composer Dup
 ```  composer dump-autoload ```
