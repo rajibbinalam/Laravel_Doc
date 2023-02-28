@@ -1,11 +1,11 @@
-### In A Relation we not need to use Ajax/ Axios
-Controller: Get Suppliers data (Suppliers with purchase relation)
+### In A Relation we can get data by data attribute, no need to use Ajax or Axios
+__Controller: Get Suppliers data (Suppliers with purchase relation)__
   
 ```php
   $data['suppliers']= Supplier::dokani()->with('purchases:id,supplier_id,invoice_no')->get(['id','name','mobile']);
 ```
 
-Blade: Suplliers Dropdown Select
+__Blade: Suplliers Dropdown Select__
 
 ```html,php
 <div class="input-group mb-2 width-100">
@@ -26,7 +26,7 @@ Blade: Suplliers Dropdown Select
 </div>
 ```
 
-Jquery: To get data supplier wise Purchase invoice
+__Jquery: To get data supplier wise Purchase invoice__
 
 ```javascript
 function getInvoices(obj) {
