@@ -1,6 +1,6 @@
-  __ PHP Date Formating __ 
+### PHP Date Formating
 
-```
+```php
   <?php
     // Assuming today is March 10th, 2001, 5:16:18 pm, and that we are in the
     // Mountain Standard Time (MST) Time Zone
@@ -30,9 +30,25 @@
 
 ```
 
-__ Get First and Last Date of The Current Month: __
+### Get First and Last Date of The Current Month:
+
+```php
+    $first_day = date('Y-m-01');   $last_day = date('Y-m-t');
 
 ```
-    $first_day = date('Y-m-01');   $last_day = date('Y-m-t');
+
+### Get date of year, previous year, month, previous month, week, previous week
+```php
+    $startYear = now()->startOfYear();
+    
+    $prevYear = now()->startOfYear()->subYear();
+    
+    $startMonth = now()->startOfMonth();
+    
+    $prevMonth = now()->startOfMonth()->subMonth();
+
+    $startWeek = now()->startOfWeek();
+    
+    $prevWeek = now()->startOfWeek()->subWeek();
 
 ```
