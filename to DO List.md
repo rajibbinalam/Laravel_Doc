@@ -30,7 +30,7 @@ https://codepen.io/Tnatal/pen/KKKXPwE
 __13.__ Laravel Cashier : [https://www.itsolutionstuff.com/post/laravel-cashier-stripe-subscription-example-tutorialexample.html](https://www.itsolutionstuff.com/post/laravel-cashier-stripe-subscription-example-tutorialexample.html)
 
 
-__14.__ Larave Multi language: Localization 
+__14.__ Larave Multi language: Localization ------------------------------ Done
 ```
 https://laravel.com/docs/10.x/localization
 https://www.itsolutionstuff.com/post/laravel-9-localization-guide-example-tutorialexample.html
