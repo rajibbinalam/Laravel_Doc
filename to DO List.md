@@ -36,3 +36,9 @@ https://laravel.com/docs/10.x/localization
 https://www.itsolutionstuff.com/post/laravel-9-localization-guide-example-tutorialexample.html
 https://lokalise.com/blog/laravel-localization-step-by-step/
 ```
+
+__15.__ Stripe Payment Gateway Integration
+https://www.itsolutionstuff.com/post/laravel-9-stripe-payment-gateway-integration-tutorialexample.html
+
+__16.__ google-charts
+https://www.itsolutionstuff.com/post/laravel-9-google-charts-tutorial-exampleexample.html
