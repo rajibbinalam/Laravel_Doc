@@ -52,3 +52,7 @@
     $prevWeek = now()->startOfWeek()->subWeek();
 
 ```
+### Carbon format:
+```php
+return \Carbon\Carbon::parse($data->created_at)->format('W');       // For Week
+```
