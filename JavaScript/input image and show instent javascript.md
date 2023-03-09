@@ -27,3 +27,6 @@ var loadFile = function (event) {
         </div>
     </div>
  ```
+ 
+### Another Jquery Plugin
+[https://www.jqueryscript.net/form/ajax-file-uploader.html](https://www.jqueryscript.net/form/ajax-file-uploader.html)
