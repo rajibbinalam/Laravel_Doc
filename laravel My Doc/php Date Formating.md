@@ -56,3 +56,16 @@
 ```php
 return \Carbon\Carbon::parse($data->created_at)->format('W');       // For Week
 ```
+
+
+### AddMonth or SubMonth => for Laravel
+```php
+
+Carbon::now()->subMonth();       // curr_month - 1 Month
+Carbon::now()->subMonths(5);      // curr_month - 5 Month
+
+Carbon::now()->addMonth();       // curr_month + 1 Month
+Carbon::now()->addMonths(5);    //  curr_month + 5 Month
+
+
+```
