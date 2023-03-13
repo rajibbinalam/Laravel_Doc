@@ -16,4 +16,11 @@ Command     : artisan schedule:run >/dev/null 2>&1
 
 /usr/local/bin/php /home/examplesoftware/domains/example.com/public_html/artisan schedule:run >/dev/null 2>&1
 
+
+
+//     For Locall:
+D:\xampp\php\php.exe D:\xampp\htdocs\project_name\artisan schedule:run
+
 ```
+
+
