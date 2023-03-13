@@ -46,6 +46,11 @@ foreach ($subscribers as $subscriber)
 public function store(Request $request){
   //...... Create Post
   SendEmails::dispatch($post);
+  // OR $this->dispatch( (new onPostPublished($post))->onQueue('emails') );
 }
 ```
 ##### 1.4. Do Step 4 for running the queue
+
+
+
+#### For Linux -> Supervisore :: [supervisore](https://learn2torials.com/a/how-to-setup-laravel-supervisor)
