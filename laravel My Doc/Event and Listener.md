@@ -1,24 +1,26 @@
-__For Example : We will Send To all or Single User A Email When Create A new Post__
+### For Example : We will Send To all or Single User A Email When Create A new Post__
 
-1. Make Event:  ```php artisan make:event NewsMailProcessed```
+##### 1. Make Event:  ```php artisan make:event NewsMailProcessed```
 
-2. Make Listener : ```php artisan make:listener SendNewsNotification --event=NewsMailProcessed```
+##### 2. Make Listener : ```php artisan make:listener SendNewsNotification --event=NewsMailProcessed```
 
-3. Register in EventServiceProvider: 
+##### 3. Register in EventServiceProvider: 
 
-```
+```php
     protected $listen = [
         Registered::class => [
             SendEmailVerificationNotification::class,
         ],
         NewsMailProcessed::class=>[                 // This is
             SendNewsNotification::class,
+            ...
+            //   More Listener's if Have
         ]
     ];
 ```
 
-4. In Event: create a public variable and construct this ( for receiving Data )
-```
+##### 4. In Event: create a public variable and construct this ( for receiving Data )
+```php
     public $data;
     public function __construct($data)
     {
@@ -26,9 +28,9 @@ __For Example : We will Send To all or Single User A Email When Create A new Pos
     }
 ```
 
-5. In Listner's handle function, Do what you want to do--------- Wanna Send Mail to User
+##### 5. In Listner's handle function, Do what you want to do--------- Wanna Send Mail to User
 
-```
+```php
     public function handle(NewsMailProcessed $event)
     {
         // if you want send Email to all User
@@ -41,10 +43,10 @@ __For Example : We will Send To all or Single User A Email When Create A new Pos
     }
 ```
 
-6. Design your Mail and View For Sending Mail (  See the Mail Part if need )
+##### 6. Design your Mail and View For Sending Mail (  See the Mail Part if need )
 
-7. Call the Event in NewsController when News Create:
+##### 7. Call the Event in NewsController when News Create:
 
-```
+```php
 event(new NewsProcessed(['title'=>$request->name, 'slug'=> $request->slug, 'message'=>'New Post Created']));
 ```
