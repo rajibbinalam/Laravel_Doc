@@ -19,9 +19,6 @@ class NewsEventMail extends Mailable implements ShouldQueue
 php artisan queue:listen
 ```
 ##### 5. Start work queue will auto.
-
-
-
 ## Make a JOB ( after steps 1,2 )
 ##### 1.1. Make jobe
 ```php
