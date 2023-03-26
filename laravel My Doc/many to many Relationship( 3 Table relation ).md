@@ -1,5 +1,5 @@
-__1. Table Structure:__
-```
+#### 1. Table Structure:
+```php
 structurals
   id
   name
@@ -14,8 +14,8 @@ groupings
  indicator_id
 
 ```
-__2. Model Relationship:__
-```
+#### 2. Model Relationship:
+```php
 class Indicator extends Model
 {
     public function structurals()
@@ -33,8 +33,8 @@ class Structural extends Model
 }
 ```
 
-__3. View (Blade File)__
-```
+#### 3. View (Blade File)
+```php
 use App\Models\Structural;
  
 $user = Structural::find(1);
@@ -43,3 +43,14 @@ foreach ($user->roles as $role) {
     echo $role->pivot->created_at;   //->pivot  == nao takte pare
 }
 ```
+
+#### 4. Searching from __IndicatorController__
+```php
+Indicator::whereHas('structurals', fn($q) => $q->where('structural_id', $request->structural_id));
+
+```
+
+
+
+
+
