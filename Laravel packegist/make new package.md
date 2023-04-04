@@ -236,4 +236,6 @@ return [
 17. web can publish vendor of our package
 ```php
 php artisan publish:vendor
+// if does not change old data after trying publish vendor 2nd time then:
+php artisan publish:vendor --force
 ```
