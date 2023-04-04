@@ -1,6 +1,7 @@
 1. make folder in root of the project
-2. goto inside of it and sh: composer init
-		-- set up your info.
+2. goto inside of it and ```composer init```
+		-- set up your info. 
+##### OR use package skeleton from spatie
 3. Configure your composer.json file
 	-- NB: name of psr-4 is the namespace of the package ex: ```"Rajib\\LaravelSlugGenerator\\"```
 4. write or copy Package Discovery in composer.json
@@ -155,14 +156,15 @@ $this->app->bind('Laravel-Slug-Generator', function($app){
 
 10. add repositories in composer.json for use this package localy(not live)
 ```php
+
 "repositories": [
         {
             "type": "path",
             "url": "./laravel-slug-generator"
         }
     ],
-// Before "require":
-// and Add this : "require-dev":
+
+// and Add this to "require-dev":
 "require-dev": {
 	"rajib/laravel-slug-generator": "*"
 }
