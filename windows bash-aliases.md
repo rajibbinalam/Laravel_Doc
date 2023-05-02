@@ -1,6 +1,6 @@
 ### Windows Bash Aliases
 
-1. goto: C:\User\/<username>\/.bashrc (Edit / Make file) this code and save
+1. goto: ```C:\User\<username>\.bashrc``` (Edit / Make file) this code and save
   ```sh
   if [ -f ~/.bash_aliases ]; then
   . ~/.bash_aliases
