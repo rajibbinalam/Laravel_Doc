@@ -10,7 +10,15 @@
   ```sh
   alias pa="php artisan"
   alias ser="php artisan ser"
+  alias art="php artisan tinker"
   alias pa:seed="php artisan db:seed"
+  alias pa:clr="php artisan optimize:clear"
+  alias pam='php artisan migrate'
+  alias pam:r='php artisan migrate:refresh'
+  alias pam:rs='php artisan migrate:refresh --seed'
+  alias cu='composer update'
+  alias ci='composer install'
+  alias cda='composer dump-autoload -o'
   ```
   
   
