@@ -15,10 +15,26 @@
   alias pa:clr="php artisan optimize:clear"
   alias pam='php artisan migrate'
   alias pam:r='php artisan migrate:refresh'
+  alias pam:s='php artisan migrate:status'
   alias pam:rs='php artisan migrate:refresh --seed'
   alias cu='composer update'
   alias ci='composer install'
-  alias cda='composer dump-autoload -o'
+  alias cdu='composer dump-autoload -o'
+  alias ser1="php artisan ser --port=8001"
+  alias ser2="php artisan ser --port=8002"
+  alias ser3="php artisan ser --port=8003"
+  alias ser4="php artisan ser --port=8004"
+  alias ser5="php artisan ser --port=8005"
+  alias ser6="php artisan ser --port=8006"
+  alias ser7="php artisan ser --port=8007"
+  alias ser8="php artisan ser --port=8008"
+  alias ser9="php artisan ser --port=8009"
+  alias ser10="php artisan ser --port=80010"
+  alias ser11="php artisan ser --port=80011"
+  alias ser12="php artisan ser --port=80012"
+  alias ser13="php artisan ser --port=80013"
+  alias ser14="php artisan ser --port=80014"
+  alias ser15="php artisan ser --port=80015"
   ```
   
   
