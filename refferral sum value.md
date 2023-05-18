@@ -14,6 +14,8 @@ public function child_user(){
 $GLOBALS['balance'] = 0;
 
 function sumTradingDataBalance($user){
+# OR we Can use variable for stay(not delete after function end or start) Like this------
+#  static $balance = 0;
     foreach ($user->child_user ?? [] as $childUser) {
         $GLOBALS['balance'] += $childUser->balance ?? 0;
         sumTradingDataBalance($childUser);
