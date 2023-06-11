@@ -14,9 +14,10 @@
   alias pa:seed="php artisan db:seed"
   alias pa:clr="php artisan optimize:clear"
   alias pam='php artisan migrate'
-  alias pam:r='php artisan migrate:refresh'
+  alias pam:r='php artisan migrate:rollback'
   alias pam:s='php artisan migrate:status'
   alias pam:rs='php artisan migrate:refresh --seed'
+  alias pam:fs='php artisan migrate:fresh --seed'
   alias cu='composer update'
   alias ci='composer install'
   alias cdu='composer dump-autoload -o'
