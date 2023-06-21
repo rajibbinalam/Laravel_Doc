@@ -1,4 +1,5 @@
- $faker = Faker::create();
+```php
+$faker = Faker::create();
  for($i = 0; $i<=100; $i++){
     User::create([
         'name' => $faker->name,
@@ -6,7 +7,11 @@
         'password' => $faker->password,
     ]);
 }
-
+```
+```sh
+php artisan tinker
+User::factory()->count(10)->create();
+```
 // Faker Provide So many Dumy Text
 // 1. Name
 // 2. Email (unique()->safeEmail)
