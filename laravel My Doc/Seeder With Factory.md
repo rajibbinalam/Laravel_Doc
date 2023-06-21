@@ -1,9 +1,10 @@
-                                           Laravel Doc: https://laravel.com/docs/8.x/seeding#main-content
+         Laravel Doc: https://laravel.com/docs/8.x/seeding#main-content
                                            
 1. Make Model & Migration: php artisan make:model Post -m
 
 2. Make Factory:  php artisan make:factory PostFactory
       ----------------- In Factory:--------------------
+```php
     protected $model = \App\Models\Post::class;
     public function definition()
     {
@@ -15,19 +16,21 @@
             'tags' => implode(',', $this->faker->words(5)),
         ];
     }
-    
+```
     
 3. Make Seeder: php artisan make:Seeder PostSeeder
 
         ---------------- In Seeder : -------------------
+```php
         public function run()
         {
            Post::factory()->count(10)->create();
            //Post::factory()->times(10)->create();
            //Post::factory(10)->create();
         }
-    
+```
 4.      ----------------- In Database Seeder -------------------
+```php
     public function run()
     {
         $this->call([
@@ -36,9 +39,12 @@
         ]);
         // \App\Models\User::factory(10)->create();
     }
-    
-  5.      DB Seeding: ----  php artisan db:seed --class=PostSeeder
-                            php artisan db:seed
+```
+  5.      DB Seeding: ----  
+```sh
+php artisan db:seed --class=PostSeeder
+php artisan db:seed
+```
                             
                             
   
