@@ -32,3 +32,6 @@ https://www.itsolutionstuff.com/post/laravel-9-stripe-payment-gateway-integratio
 
 - [x] google-charts
 https://www.itsolutionstuff.com/post/laravel-9-google-charts-tutorial-exampleexample.html
+
+- [x] Web Hook Laravel
+https://laravelcode.com/post/how-to-send-webhook-in-laravel-8
