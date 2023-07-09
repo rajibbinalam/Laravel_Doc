@@ -36,6 +36,11 @@
     $first_day = date('Y-m-01');   $last_day = date('Y-m-t');
 
 ```
+### Date Diff for Humens
+```php
+{{ $blog_post->created_at->diffForHumans() }}   <!-- it'll show: 4 Hours Ago -->
+{{ optional($item->product)->created_at->diff(\Carbon\Carbon::now())->format('%yY, %mM') }}  // 1Year , 4 Months
+```
 
 ### Get date of year, previous year, month, previous month, week, previous week
 ```php
