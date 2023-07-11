@@ -22,7 +22,11 @@
 
   In simple terms, guards handle the process of determining who the user is, while policies handle the process of determining what the user is allowed to do. They work together to provide a robust authentication and authorization system in Laravel applications.
 #### 3. what is Facades?
-#### 4. What is ShouldQuiue and Quiable in Quiue? What does these in backend?
+#### 4. What is ShouldQuiue and Quiable in Quiue? What does these in backend (behind the scene)?
 #### 5. What's attribute in model?
 #### 6. What's Service Provider and Service Container?
 #### 7. What's interface?
+#### 8. What is model binding and what it does?
+#### 9. What to do `boot` method in model?
+#### 10. Why use Service and what is the benifit of it?
+#### 11. If by mistakely 2 Routes are exactly Same. then which will be call first?
