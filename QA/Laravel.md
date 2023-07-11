@@ -30,3 +30,6 @@
 #### 9. What to do `boot` method in model?
 #### 10. Why use Service and what is the benifit of it?
 #### 11. If by mistakely 2 Routes are exactly Same. then Explain what will do?
+#### 12. Dependency Injection in laravel?
+#### 13. Service provider and Service Container?
+
