@@ -29,4 +29,4 @@
 #### 8. What is model binding and what it does?
 #### 9. What to do `boot` method in model?
 #### 10. Why use Service and what is the benifit of it?
-#### 11. If by mistakely 2 Routes are exactly Same. then which will be call first?
+#### 11. If by mistakely 2 Routes are exactly Same. then Explain what will do?
