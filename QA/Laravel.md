@@ -34,4 +34,10 @@
 #### 13. Service provider and Service Container?
 #### 14. What's psr and psr4?
 #### 15. Laravel Magic methods Explaination?
-
+    ans:  Find the more Details and in below some method names are considered magical: 
+    
+```php
+__construct(), __destruct(), __call(), __callStatic(), __get(), __set(), __isset(), __unset(),
+__sleep(), __wakeup(), __serialize(), __unserialize(), __toString(), __invoke(), __set_state(),
+__clone(), and __debugInfo().
+```
