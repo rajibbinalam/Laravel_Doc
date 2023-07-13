@@ -7,6 +7,7 @@
 @endphp
 
 
-$interval->days > 0 ? $interval->format('%R%a days Remain')
+$interval->days > 0 ? $interval->format('%R%a days Remain'); // +5 days Remain
+$interval->format('%a'); // 5 
 
 ```
