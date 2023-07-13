@@ -25,7 +25,7 @@
 #### 4. What is ShouldQuiue and Quiable in Quiue? What does these in backend (behind the scene)?
 #### 5. What's attribute in model?
 #### 6. What's Service Provider and Service Container?
-#### 7. What's interface?
+#### 7. What's interface? Utilize and use.
 #### 8. What is model binding and what it does?
 #### 9. What to do `boot` method in model?
 #### 10. Why use Service and what is the benifit of it?
@@ -33,4 +33,5 @@
 #### 12. Dependency Injection in laravel?
 #### 13. Service provider and Service Container?
 #### 14. What's psr and psr4?
+#### 15. Laravel Magic methods Explaination?
 
