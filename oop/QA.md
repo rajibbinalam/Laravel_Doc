@@ -77,3 +77,7 @@ $childObject->changePrivateVariable('new value');
 #### 3. What is Getter and Setter Methods (accessors and mutators)
 ANS:
 Getter and setter methods, also known as accessors and mutators, are methods used to retrieve (get) and modify (set) the values of private or protected variables in a class. They provide a way to access and manipulate the state of an object while maintaining encapsulation and controlling access to the variables
+
+#### 4. What is Access Modifier?
+ANS:
+Access modifiers (or access specifiers) are keywords in object-oriented languages that set the accessibility of classes, methods, and other members. Ex: public, private, protected
