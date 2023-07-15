@@ -41,3 +41,4 @@ __construct(), __destruct(), __call(), __callStatic(), __get(), __set(), __isset
 __sleep(), __wakeup(), __serialize(), __unserialize(), __toString(), __invoke(), __set_state(),
 __clone(), and __debugInfo().
 ```
+#### 16. What the deference between self:: and $this?
