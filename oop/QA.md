@@ -81,3 +81,8 @@ Getter and setter methods, also known as accessors and mutators, are methods use
 #### 4. What is Access Modifier?
 ANS:
 Access modifiers (or access specifiers) are keywords in object-oriented languages that set the accessibility of classes, methods, and other members. Ex: public, private, protected
+
+#### 5. What the deference between `self::` and `$this`?
+ANS: `self::` is use for static property of a class. and `$this` is used for other property of a class.
+
+<b> 🟥 NB: for static function access by a class Instence => `className::functionName`. </b>
