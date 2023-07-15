@@ -80,9 +80,56 @@ Getter and setter methods, also known as accessors and mutators, are methods use
 
 #### 4. What is Access Modifier?
 ANS:
-Access modifiers (or access specifiers) are keywords in object-oriented languages that set the accessibility of classes, methods, and other members. Ex: public, private, protected
+Access modifiers (or access specifiers) are keywords in object-oriented languages that set the accessibility of classes, methods, and other members. 
+Ex: 
 
+__public:__ Can Access `public` Property : 1. Inside 2. Class Object instence 3. Sub Class
+
+__private:__ Can Access `private` Property : 1. Inside
+
+__protected:__ Can Access `protected` Property : 1. Inside 3. Sub Class
+
+```php
+class User{
+    public $name = 'Rajib';
+    final public function userInfo(){
+        echo $this->name;               // 1. This is Inside
+    }
+}
+-----------------------------------------------
+class Admin extends User{
+    public function userInfo(){
+        echo $this->name;            // 2. This is Inherit (Sub Class)
+    }
+}
+-----------------------------------------------
+
+$user = new User;
+$user->name;                        // 3. This is Object instence
+```
 #### 5. What the deference between `self::` and `$this`?
 ANS: `self::` is use for static property of a class. and `$this` is used for other property of a class.
 
 <b> 🟥 NB: for static function access by a class Instence => `className::functionName`. </b>
+#### 6. How to Prevent Extending(inherit) of a class & Overriding a Method of a Class?
+ANS: Use `final` keyword;
+__In Class__
+```php
+final class User{     // This Class can't be inherit or extends
+}
+```
+__In Method__
+```php
+class ParentClass {
+    final public function myMethod() {
+        // Method implementation Final Keyword
+    }
+}
+
+class ChildClass extends ParentClass {
+    // Attempting to override the final method will result in an error
+    public function myMethod() {
+        // New implementation - Error: Cannot override final method
+    }
+}
+```
