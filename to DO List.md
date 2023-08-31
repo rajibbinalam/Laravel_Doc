@@ -16,7 +16,7 @@ https://bootstrapfriendly.com/blog/how-to-make-bootstrap-modal-draggable-and-res
 https://codepen.io/Tnatal/pen/KKKXPwE
 
 ```
-
+- [ ] Laravel hasManyThrow() relationship
 - [ ] Laravel Cashier : [https://www.itsolutionstuff.com/post/laravel-cashier-stripe-subscription-example-tutorialexample.html](https://www.itsolutionstuff.com/post/laravel-cashier-stripe-subscription-example-tutorialexample.html)
 
 
