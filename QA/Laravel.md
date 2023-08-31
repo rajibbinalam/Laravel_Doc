@@ -14,31 +14,37 @@
   A policy in Laravel is used for defining authorization rules or access policies for individual models or resources. It allows you to define the rules that determine whether a user is authorized to perform specific actions on a resource. Policies help you centralize and encapsulate authorization logic related to specific models or resources.
   A policy class typically contains authorization methods corresponding to different actions, such as view, create, update, and delete. These methods define the authorization logic based on the user's role, permissions, or other criteria. Policies are often used in conjunction with Laravel's gate feature, which provides a convenient way to perform authorization checks throughout your application.
 
-  To summarize the difference:
+  __To summarize the difference:__
 
-  -Guard focuses on user authentication and managing the user session. It determines how users are authenticated and provides the necessary functionality to handle authentication-related tasks.
+  __-Guard__ focuses on user authentication and managing the user session. It determines how users are authenticated and provides the       necessary functionality to handle authentication-related tasks.
   
-  -Policy, on the other hand, focuses on authorization and defining rules for accessing specific resources. It provides a centralized place to define authorization logic for individual models or resources.
+  __-Policy__ , on the other hand, focuses on authorization and defining rules for accessing specific resources. It provides a               centralized place to define authorization logic for individual models or resources.
 
   In simple terms, guards handle the process of determining who the user is, while policies handle the process of determining what the user is allowed to do. They work together to provide a robust authentication and authorization system in Laravel applications.
 #### 3. what is Facades?
 #### 4. What is ShouldQuiue and Quiable in Quiue? What does these in backend (behind the scene)?
 #### 5. What's attribute in model?
-#### 6. What's Service Provider and Service Container?
 #### 7. What's interface? Utilize and use.
+    ans: A PHP interface defines a contract which a class must fulfill.
 #### 8. What is model binding and what it does?
 #### 9. What to do `boot` method in model?
 #### 10. Why use Service and what is the benifit of it?
 #### 11. If by mistakely 2 Routes are exactly Same. then Explain what will do?
 #### 12. Dependency Injection in laravel?
+    ans: When a class/interface use in a function parameter, this called Dependency Injection.
 #### 13. Service provider and Service Container?
+    ans: 1. Service providers are the central place to configure your application. If you open the config/app. php file included with               Laravel, you will see a providers array. These are all of the service provider classes that will be loaded for your                     application.
+         2. The service providers in a Laravel application serve as the core point from which the application is bootstrapped. As a                 result, providers are used to inject laravel's basic services into the service container as well as our application's                   services, classes, and their dependencies into the service container.
 #### 14. What's psr and psr4?
+    ans: PHP standart recomendation. PSR-4 (Autoloading Standard).  Learn...
+         1. https://www.php-fig.org/psr/psr-4/    2. https://www.specbee.com/blogs/introduction-php-standard-recommendation-psr
 #### 15. Laravel Magic methods Explaination?
     ans:  Find the more Details and in below some method names are considered magical: 
-    
 ```php
 __construct(), __destruct(), __call(), __callStatic(), __get(), __set(), __isset(), __unset(),
 __sleep(), __wakeup(), __serialize(), __unserialize(), __toString(), __invoke(), __set_state(),
 __clone(), and __debugInfo().
 ```
+#### 15. What is Trait and why it use for?
+    ans: Traits are a mechanism for code reuse in single inheritance languages such as PHP.
 #### 16. What the deference between self:: and $this?
