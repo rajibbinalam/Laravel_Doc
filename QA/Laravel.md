@@ -24,6 +24,7 @@
 #### 3. what is Facades?
 #### 4. What is ShouldQuiue and Quiable in Quiue? What does these in backend (behind the scene)?
 #### 5. What's attribute in model?
+    ans: Laravel model attributes are basically representing the database fields for the given model. When data is retrieved from the database, it can be accessed through the model           as they were actual properties of the model instance: $model->database_column_name .
 #### 7. What's interface? Utilize and use.
     ans: A PHP interface defines a contract which a class must fulfill.
 #### 8. What is model binding and what it does?
@@ -33,8 +34,8 @@
 #### 12. Dependency Injection in laravel?
     ans: When a class/interface use in a function parameter, this called Dependency Injection.
 #### 13. Service provider and Service Container?
-    ans: 1. Service providers are the central place to configure your application. If you open the config/app. php file included with               Laravel, you will see a providers array. These are all of the service provider classes that will be loaded for your                     application.
-         2. The service providers in a Laravel application serve as the core point from which the application is bootstrapped. As a                 result, providers are used to inject laravel's basic services into the service container as well as our application's                   services, classes, and their dependencies into the service container.
+    ans: 1. Service providers are the central place to configure your application. If you open the config/app. php file included with Laravel, you will see a providers array. These             are all of the service provider classes that will be loaded for your application.
+         2. The service providers in a Laravel application serve as the core point from which the application is bootstrapped. As a result, providers are used to inject laravel's               basic services into the service container as well as our application's services, classes, and their dependencies into the service container.
 #### 14. What's psr and psr4?
     ans: PHP standart recomendation. PSR-4 (Autoloading Standard).  Learn...
          1. https://www.php-fig.org/psr/psr-4/    2. https://www.specbee.com/blogs/introduction-php-standard-recommendation-psr
@@ -48,3 +49,28 @@ __clone(), and __debugInfo().
 #### 15. What is Trait and why it use for?
     ans: Traits are a mechanism for code reuse in single inheritance languages such as PHP.
 #### 16. What the deference between self:: and $this?
+    ans: 
+  __self::__ is used to access class constants, static properties, and static methods within the context of the class itself. within the static method
+```php
+class MyClass {
+    const MY_CONSTANT = 10;
+    public static function printConstant() {
+        echo self::MY_CONSTANT;
+    }
+}
+```
+
+   __$this__ is used to refer to the current instance of the class. It can be used to access instance properties and methods. It's commonly used within non-static methods to refer        to the properties and methods specific to the instance of the class that the method is being called on.
+```php
+class MyClass {
+    private $myProperty;
+    
+    public function setProperty($value) {
+        $this->myProperty = $value;
+    }
+    
+    public function getProperty() {
+        return $this->myProperty;
+    }
+}
+```
