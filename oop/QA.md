@@ -1,6 +1,6 @@
-### OOP some tricks question and answer (Find the answer below or search in Chat GPT)
+## OOP some tricks question and answer (Find the answer below or search in Chat GPT)
 
-#### 1. how to change a private variable value of a class creating a new instance?
+### 1. how to change a private variable value of a class creating a new instance?
 ANS:
 In (OOP), private variables are intended to be accessed and modified only within the class where they are declared. However, you can provide public methods, known as "setter" methods, to modify the private variable values indirectly.
 
@@ -25,7 +25,7 @@ $myObject->setPrivateVariable('new value');
 
 ```
 
-#### 2. how can i change private variable value of a class which is inherited from other class?
+### 2. how can i change private variable value of a class which is inherited from other class?
 ANS:
 In OOP, if a private variable is declared in a parent class and you want to change its value in a child class, you have a few options:
 
@@ -74,11 +74,11 @@ $childObject = new ChildClass();
 $childObject->changePrivateVariable('new value');
 ```
 
-#### 3. What is Getter and Setter Methods (accessors and mutators)
+### 3. What is Getter and Setter Methods (accessors and mutators)
 ANS:
 Getter and setter methods, also known as accessors and mutators, are methods used to retrieve (get) and modify (set) the values of private or protected variables in a class. They provide a way to access and manipulate the state of an object while maintaining encapsulation and controlling access to the variables
 
-#### 4. What is Access Modifier?
+### 4. What is Access Modifier?
 ANS:
 Access modifiers (or access specifiers) are keywords in object-oriented languages that set the accessibility of classes, methods, and other members. 
 Ex: 
@@ -107,11 +107,11 @@ class Admin extends User{
 $user = new User;
 $user->name;                        // 3. This is Object instence
 ```
-#### 5. What the deference between `self::` and `$this`?
+### 5. What the deference between `self::` and `$this`?
 ANS: `self::` is use for static property of a class. and `$this` is used for other property of a class.
 
 <b> 🟥 NB: for static function access by a class Instence => `className::functionName`. </b>
-#### 6. How to Prevent Extending(inherit) of a class & Overriding a Method of a Class?
+### 6. How to Prevent Extending(inherit) of a class & Overriding a Method of a Class?
 ANS: Use `final` keyword;
 __In Class__
 ```php
@@ -133,7 +133,7 @@ class ChildClass extends ParentClass {
     }
 }
 ```
-#### 6. Abstract Classes?
+### 6. Abstract Classes?
 ANS: An abstract class is a class that contains at least one abstract method. An abstract method is a method that is declared, but not         implemented in the code.
 
   __Rules:__
@@ -143,3 +143,37 @@ ANS: An abstract class is a class that contains at least one abstract method. An
     2. The child class method must be defined with the same or a less restricted access modifier
     
     3. The number of required arguments must be the same. However, the child class may have optional arguments in addition
+
+### 7. Can i instantiate an abstract class in php?
+ANS: No, you cannot directly instantiate an abstract class in PHP. Abstract classes are meant to be used as blueprints for other             classes, and they typically contain abstract methods that must be implemented by any concrete (non-abstract) subclass. Abstract          classes themselves cannot be instantiated because they are incomplete and may have methods that lack implementations. abstract           classes is to serve as a blueprint for concrete subclasses
+### 8. A abstract class can extends another abstract class in php?
+ANS: Yes, in PHP, an abstract class can extend another abstract class.
+```php
+abstract class Animal {
+    abstract public function makeSound();
+}
+
+abstract class Mammal extends Animal {
+    abstract public function giveBirth();
+}
+
+class Dog extends Mammal {
+    public function makeSound() {
+        return "Woof!";
+    }
+
+    public function giveBirth() {
+        return "Gives birth to live puppies.";
+    }
+}
+```
+### 9. Abstraction vs. Interfaces:
+ANS: 
+1. Abstract classes can have both abstract and concrete methods, while interfaces can only define method signatures (no method implementations).
+
+2. A class can extend only one abstract class but can implement multiple interfaces.
+
+### 10. Can you declare a private/ protected method in an interface?
+ANS: NO, All methods or Access modifiers declared in an interface must be public.
+### 11. Interface Inheritance:
+ANS: Interfaces can extend other interfaces using the extends keyword.
