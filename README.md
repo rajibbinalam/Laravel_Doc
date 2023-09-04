@@ -1,4 +1,10 @@
-# Laravel_My_Doc
+# Laravel MyDoc is a learn & write concept for me
 My Doc. You may don't understand.
 
-## learn and practice Git hub for expert
+### Laravel
+### PHP
+### JavaScript
+### Git & GitHub
+### React JS
+### MySql & Xampp
+
