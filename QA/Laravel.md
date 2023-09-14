@@ -74,3 +74,5 @@ class MyClass {
     }
 }
 ```
+#### 17. What is aggregate in Laravel?
+    ans:  Laravel includes aggregate functions such as max, min, count, average, and total
