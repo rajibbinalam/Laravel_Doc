@@ -7,3 +7,6 @@
   1. __INNER JOIN__: returns only matching rows from both tables.
   2. __LEFT JOIN__: returns all rows from the left table and matching rows from the right table.
   3. __RIGHT JOIN__: returns all rows from the right table and matching rows from the left table.
+
+### 3. Index in mysql
+---- ANS: Index is a mchanism where we can assign a filed as ```UNIQUE```, ```PRIMERY``` and more.
