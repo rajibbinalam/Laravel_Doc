@@ -42,3 +42,20 @@
   
   #### NB: It'll work using GitBash not in powerShell
   More Resources: https://laravel-news.com/bash-aliases
+
+
+  ### Linux or Mac OS Bash Alias
+```sh
+  nano ~/.bashrc
+```
+#### If want to Moduler (separate file):
+__1. in__ .bashrc:
+```sh
+  if [ -f ~/.bash_aliases ]; then
+  . ~/.bash_aliases
+  fi
+```
+__2. in__ .bash_aliases (or make any name of the file)
+```sh
+# past the alias CODE
+```
