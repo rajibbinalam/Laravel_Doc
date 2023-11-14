@@ -44,7 +44,7 @@
   More Resources: https://laravel-news.com/bash-aliases
 
 
-  ### Linux or Mac OS Bash Alias
+### Linux or Mac OS Bash Alias
 ```sh
 # For bash
 nano ~/.bashrc
