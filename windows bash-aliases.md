@@ -46,8 +46,12 @@
 
   ### Linux or Mac OS Bash Alias
 ```sh
-  nano ~/.bashrc
+# For bash
+nano ~/.bashrc
+# For zsh
+nano ~/.zshrc
 ```
+#### Then Past the Alias code in the editor and then ctl+X to save and ext
 #### If want to Moduler (separate file):
 __1. in__ .bashrc:
 ```sh
