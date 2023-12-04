@@ -1,8 +1,8 @@
-Make a Traids for it and use the Traids name in model
+### Make a Traids for it and use the Traids name in model
 
 __1. auto update or create created_by & updated_by when creating and updating this model Data__
 
-```
+```php
 public static function boot()
     {
         parent::boot();
@@ -33,7 +33,7 @@ public static function boot()
 
 __2. autometicly update or create Monthly Report when create or update any data of Transactions Table__ (See..  Cable Billing => TransactionEventTracker )
 
-```
+```php
    public static function boot()
     {
         parent::boot();
