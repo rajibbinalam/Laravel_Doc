@@ -1,5 +1,5 @@
-### Select2 with Ajax Live Search with 50 Elements
-
+## Select2 with Ajax Live Search
+### System 1 : Search in one selection Field
 #### Html (Blade) setup
 ```blade
 <div class="col-lg-5">
@@ -79,3 +79,6 @@ if($request->is_ajax){
 }
 ```
 
+### System 2 : Search Two way (left->right & right->left)
+##### NB: if search upazila, than `district`, `division`, `country` will auto complete with the relation.
+### Reference: Project::SalesForce->Market Setup
