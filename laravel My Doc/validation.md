@@ -7,3 +7,19 @@ $request->validate([
     // It will work only when 'approval_company' are same
 ]);
 ```
+
+```php
+$validator = Validator::make(
+    $request->all(),
+    [
+        'atnd_mode'   => 'required',
+    ]
+);
+if ($validator->fails()) {
+    return response()->json([
+        'status'    => 0,
+        'data'      => 'Error',
+        'message'   => $validator->errors()->first(),
+    ]);
+}
+```
