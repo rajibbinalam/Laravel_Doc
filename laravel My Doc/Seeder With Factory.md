@@ -1,9 +1,16 @@
          Laravel Doc: https://laravel.com/docs/8.x/seeding#main-content
                                            
-1. Make Model & Migration: php artisan make:model Post -m
+1. Make Model & Migration:
+```sh
+php artisan make:model Post -m
+```
 
-2. Make Factory:  php artisan make:factory PostFactory
-      ----------------- In Factory:--------------------
+3. Make Factory:
+
+```sh
+php artisan make:factory PostFactory
+```
+----------------- In Factory:--------------------
 ```php
     protected $model = \App\Models\Post::class;
     public function definition()
@@ -18,9 +25,11 @@
     }
 ```
     
-3. Make Seeder: php artisan make:Seeder PostSeeder
-
-        ---------------- In Seeder : -------------------
+3. Make Seeder:
+```sh
+php artisan make:Seeder PostSeeder
+```
+---------------- In Seeder : -------------------
 ```php
         public function run()
         {
@@ -29,7 +38,7 @@
            //Post::factory(10)->create();
         }
 ```
-4.      ----------------- In Database Seeder -------------------
+4.----------------- In Database Seeder -------------------
 ```php
     public function run()
     {
@@ -40,7 +49,7 @@
         // \App\Models\User::factory(10)->create();
     }
 ```
-  5.      DB Seeding: ----  
+  5.----DB Seeding: ----  
 ```sh
 php artisan db:seed --class=PostSeeder
 php artisan db:seed
