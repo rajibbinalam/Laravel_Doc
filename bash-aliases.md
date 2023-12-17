@@ -20,6 +20,8 @@
   alias pam:fs='php artisan migrate:fresh --seed'
   alias cu='composer update'
   alias ci='composer install'
+  alias pcu='php composer.phar update'
+  alias pci='php composer.phar install'
   alias cdu='composer dump-autoload -o'
   alias ser1="php artisan ser --port=8001"
   alias ser2="php artisan ser --port=8002"
