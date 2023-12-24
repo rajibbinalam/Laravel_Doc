@@ -82,3 +82,58 @@ if($request->is_ajax){
 ### System 2 : Search Two way (left->right & right->left)
 ##### NB: if search upazila, than `district`, `division`, `country` will auto complete with the relation.
 ### Reference: Project::SalesForce->Market Setup
+
+#### Select2 Ajax Search with old options:
+```js
+$(document).ready(function() {
+    select2MarketAjax(`{{ route('search-division') }}`, 'division_id');
+    select2MarketAjax(`{{ route('search-district') }}`, 'district_id');
+    select2MarketAjax(`{{ route('search-upazila') }}`, 'upazila_id');
+    select2MarketAjax(`{{ route('search-union') }}`, 'union_id');
+    select2MarketAjax(`{{ route('search-market') }}`, 'market_id');
+    select2MarketAjax(`{{ route('search-sub-market') }}`, 'sub_market_id');
+});
+
+function select2MarketAjax(route, clss){
+    var combine = [];
+    // This is for Old / Existing Values
+    $("."+clss).find("option").map(function(i, v) {
+            let nOption = { id : $(v).val(), text : $(v).text() }
+            combine.push(nOption);
+    }).get();
+
+    $("."+clss).select2({
+        ajax: {
+            url: route,
+            type: "GET",
+            dataType: 'json',
+            delay: 250,
+            data: function(params) {
+                return {
+                    is_ajax: true,
+                    search: params.term
+                };
+            },
+            processResults: function(response) {
+                let res = response?.length == 0 ? [] : response?.data;
+
+                if(res?.length > 0){
+                    var options = []
+                }else{
+                    var options = combine;
+                }
+                $.map(res, function (item) {
+                    let option = {
+                        text: item.name,
+                        id: item.id
+                    }
+                    options.push(option);
+                });
+                return { results: options };
+            },
+            cache: true
+        }
+    });
+}
+
+```
