@@ -10,6 +10,6 @@ public function manual_ot_details(): HasManyThrough
 }
 
 // Retrive the all Employee With Amount of Manual OT
-return Employee::query()->withCount(['manual_ot_details'=> fn($q)=>$q->whereHas('manual_ot', fn($qq)=> $qq->where('month', $request->month)->where('in_salary_shit', 1))->select(DB::Raw('SUM(ot_amount)'))])
+return Employee::query()->withCount(['manual_ot_details as manual_ot'=> fn($q)=>$q->whereHas('manual_ot', fn($qq)=> $qq->where('month', $request->month)->where('in_salary_shit', 1))->select(DB::Raw('SUM(ot_amount)'))])
                 ->get();
 ```
