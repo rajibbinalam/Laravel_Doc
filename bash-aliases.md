@@ -10,7 +10,7 @@
   ```sh
   alias pa="php artisan"
   alias ser="php artisan ser"
-  alias art="php artisan tinker"
+  alias pat="php artisan tinker"
   alias pa:seed="php artisan db:seed"
   alias pa:clr="php artisan optimize:clear"
   alias pam='php artisan migrate'
