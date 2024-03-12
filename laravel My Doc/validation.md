@@ -25,3 +25,9 @@ if ($validator->fails()) {
     ]);
 }
 ```
+```php
+// Update($id)
+$request->validate([
+    'name'  => 'required|unique:couriers,name,'.$id
+]);
+```
