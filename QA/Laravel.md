@@ -76,3 +76,22 @@ class MyClass {
 ```
 #### 17. What is aggregate in Laravel?
     ans:  Laravel includes aggregate functions such as max, min, count, average, and total
+
+#### 18. When we should use query builder instead of Eloquent query?
+    Discussion: 
+    1. Lightweight Operations
+    2. Complex SQL Queries
+    3. Situations Where ORM Features Are Not Needed
+    
+    ans: When we want to store as it is to the database like,
+ ```php   
+// This Originial Data that want to store
+'{"icon":"<i class=\"fab fa-telegram-plane\"><\/i>","title":"Official Channel","content":"https:\/\/t.me\/fxtraderswide"}'
+  
+// After Store the data using ```Eloquent Query``` in database
+"{\"icon\":\"<i class=\\\"fab fa-telegram-plane\\\"><\\\/i>\",\"title\":\"Official Channel\",\"content\":\"https:\\\/\\\/t.me\\\/fxtraderswide\"}"
+  
+// After Store the data using ```Query builder``` in database
+{"icon":"<i class=\"fab fa-telegram-plane\"><\/i>","title":"Official Channel","content":"https:\/\/t.me\/fxtraderswide"}
+```
+  So, Query Builder Better In this Situation
