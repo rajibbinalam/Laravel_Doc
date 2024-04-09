@@ -1,4 +1,4 @@
-### Laravel QA
+## Laravel QA
 #### 1. What is resource in laravel?
   ans: resource is a class which is used to convert the database or model into json serializable Data. send from server to the client.
 #### 2. What is Guard and policy? and diference between them?
@@ -95,3 +95,18 @@ class MyClass {
 {"icon":"<i class=\"fab fa-telegram-plane\"><\/i>","title":"Official Channel","content":"https:\/\/t.me\/fxtraderswide"}
 ```
   So, Query Builder Better In this Situation
+
+
+#### 19. What is actual different between Throwable $th and Exception $e in laravel try catch.
+```php
+try {
+    // Some code that might throw an Exception or Error
+} catch (Exception $e) {
+    // This block will catch any Exception and its subclasses
+    // But will not catch PHP runtime Errors
+} catch (Error $e) {
+    // This block can specifically catch PHP runtime Errors
+} catch (Throwable $th) {
+    // This block will catch both Exceptions and Errors, along with any other Throwable
+}
+```
