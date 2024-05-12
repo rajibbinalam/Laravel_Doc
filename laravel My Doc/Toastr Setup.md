@@ -1,5 +1,5 @@
-	***--------------- Step 1 -----------------------***
-```
+## Step 1 
+```html
 <head>
     <title>Laravel 8 Toastr Notification Example - websolutionstuff.com</title>
 
@@ -14,13 +14,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 </head>
 ```
-
-
-
-
-	***-----------------------Step 2----------------------***
-
-```javascript
+## Step 2
+```php
 <script>
   @if(Session::has('message'))
   toastr.options =
@@ -59,7 +54,7 @@
   @endif
 </script>
 ```
-	***-------------------- Step 3 ---------------- ***
+## Step 3
 
 ```php
 return redirect()->route('your route name')->with('message','Data added Successfully');
@@ -71,14 +66,13 @@ return redirect()->route('your route name')->with('Warning','Are you sure you wa
 return redirect()->route('your route name')->with('info','This is xyz information');
 ```
 
-	***------------------------  Extra ----------------------***
-			-------------------------------- AJAX
+## AJAX
 
-```
-	success: function(res) {
-            toastr.success(res.success);
-          },
-	  error: function(res) {
-            toastr.error(res.error);
-          }
+```js
+success: function(res) {
+    toastr.success(res.success);
+},
+error: function(res) {
+    toastr.error(res.error);
+}
 ```
