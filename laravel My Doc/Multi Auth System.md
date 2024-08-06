@@ -26,14 +26,16 @@ php artisan make:model Admin -m
 #### 9. In Config/Auth.php 
 ```php
 // 1. guards=>
+
 	'admin'=>[
 		'driver'=>'session',
 		'provider' => 'admin',
 		],
-// 2. provider => 
+// 2. provider=>
+
 	'admins'=>[
 		'driver'=>'eloquent',
-		'model'=> App\Models|Admin::class,
+		'model'=> App\Models\Admin::class,
 		],
 ```
 #### 10. make: Middleware (Admin)
