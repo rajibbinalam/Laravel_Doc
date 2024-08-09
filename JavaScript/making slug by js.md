@@ -1,4 +1,4 @@
-#IT CAN'T AVOID (# $ % & * ?) SPACIAL CHARACTER
+# IT CAN'T AVOID (# $ % & * ?) SPACIAL CHARACTER
 
 ```javascript
 function mytitle() {
@@ -9,7 +9,7 @@ function mytitle() {
 ```
 
 
-#IT CAN AVOID (# $ % & * ?) SPACIAL CHARACTER
+# IT CAN AVOID (# $ % & * ?) SPACIAL CHARACTER
 
 ```javascript
 function HeadingSlug(){
@@ -18,4 +18,19 @@ function HeadingSlug(){
       var slug = titleSlug.replace(/\s+/g,'-').toLowerCase();
       document.getElementById('slug').value = slug;
  }
+```
+# IT will remove special characters and multiple dash (-)
+```php
+    function HeadingSlug(){
+        let heading = document.getElementById('title').value;
+        let titleSlug = heading.trim().replace(/\s+/g, '-').toLowerCase();
+        titleSlug = titleSlug.replace(/[^a-zA-Z0-9\-]/g, '');
+        // let slug = titleSlug.replace(/-$/, '');
+        
+        let slug = titleSlug.replace(/-{2,}/g, '-');
+
+        // Remove trailing dash, if any
+        slug = slug.replace(/-$/, '');
+        document.getElementById('slug').value = slug;
+    }
 ```
