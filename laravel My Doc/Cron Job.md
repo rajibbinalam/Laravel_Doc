@@ -1,4 +1,4 @@
-#### Laravel Cron job 
+### Laravel Cron job 
 
 - [x] make a command and type your functionality in 'handle' function.
  
@@ -9,9 +9,9 @@
     ];
 ```
 - [x] Set your Schedules [see more...](https://laravel.com/docs/10.x/scheduling#schedule-frequency-options)
- ##### OR
+ #### OR
 - [x] 1. Make Job Queue Properly.
-##### Run Commands
+#### Run Commands
 ```php
 
 php artisan schedule:run   //  For run the Command
@@ -35,6 +35,11 @@ Command     : artisan schedule:run >/dev/null 2>&1
 //     For Locall:
 D:\xampp\php\php.exe D:\xampp\htdocs\project_name\artisan schedule:run
 
+```
+### Get System PHP path and with CRON
+```php
+$php_binary_path = empty(PHP_BINARY) ? 'php' : PHP_BINARY;
+$data['command'] = '* * * * * '.$php_binary_path.' '.base_path('artisan').' schedule:run >> /dev/null 2>&1';
 ```
 
 
