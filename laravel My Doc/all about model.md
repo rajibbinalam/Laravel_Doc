@@ -96,3 +96,32 @@ class Salary extends Model{
 }
 ```
 
+### Created By and Updated By:
+```php
+public static function boot()
+    {
+        parent::boot();
+
+        if (!App::runningInConsole()) {
+            /**
+             * Auto create created_by field when create anything through model
+             */
+            static::creating(function ($model) {
+                $model->fill([
+                    'created_by' => auth()->id() ?? 1,
+                    'updated_by' => auth()->id() ?? 1
+                ]);
+            });
+
+            /**
+             * Auto update updated_by field when update anything of the model data
+             */
+            static::updating(function ($model) {
+                $model->fill([
+                    'updated_by' => auth()->id() ?? 1
+                ]);
+            });
+        }
+    }
+```
+
