@@ -22,7 +22,25 @@
 
   In simple terms, guards handle the process of determining who the user is, while policies handle the process of determining what the user is allowed to do. They work together to provide a robust authentication and authorization system in Laravel applications.
 #### 3. what is Facades?
+<p>facades provide a "static" interface to classes that are available in the application's service container. They act as shortcuts to
+ access underlying classes that perform actual work, without needing to manually resolve them from the service container or inject them.
+
+  A facade in Laravel is a class that provides a static-like interface to an object that is managed by the service container.
+  
+  Each facade has a method ```getFacadeAccessor()``` that tells Laravel what service to resolve from the container.</p>
+
 #### 4. What is ShouldQuiue and Quiable in Quiue? What does these in backend (behind the scene)?
+
+<p>
+  In Laravel, when working with queues, the interfaces ShouldQueue and the trait Queueable are used to define how a job (like sending an email, processing an image, etc.) should be handled asynchronously in the background.
+  
+  ShouldQueue is an interface that tells Laravel:
+  "This job should not run immediately; instead, queue it to be processed later."
+
+  Queueable is a trait provided by Laravel that gives a class several helpful methods and properties related to queue behavior.
+
+</p>
+
 #### 5. What's attribute in model?
     ans: Laravel model attributes are basically representing the database fields for the given model. When data is retrieved from the database, it can be accessed through the model           as they were actual properties of the model instance: $model->database_column_name .
 #### 7. What's interface? Utilize and use.
