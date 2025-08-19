@@ -42,32 +42,53 @@
 </p>
 
 #### 5. What's attribute in model?
-    ans: Laravel model attributes are basically representing the database fields for the given model. When data is retrieved from the database, it can be accessed through the model           as they were actual properties of the model instance: $model->database_column_name .
+ __ans__: Laravel model attributes are basically representing the database fields for the given model. When data is retrieved from the database, it can be accessed through the model           as they were actual properties of the model instance: $model->database_column_name .
 #### 7. What's interface? Utilize and use.
-    ans: A PHP interface defines a contract which a class must fulfill.
+ __ans__: A PHP interface defines a contract which a class must fulfill.
 #### 8. What is model binding and what it does?
-#### 9. What to do `boot` method in model?
+  <p>
+    Model Binding is a powerful feature in Laravel that automatically injects model instances into your route or controller methods         based on route parameters.
+  </p>
+
+__Instead__ of manually querying the database using an ID passed in the URL, Laravel does it for you behind the scenes.
+__Example__
+```php
+// Route
+Route::get('/users/{user}', function (App\Models\User $user) {
+    return $user;
+});
+//Controller
+public function show(User $user)
+{
+    return view('users.show', compact('user'));
+}
+```
+#### 9. What Does the boot Method Do in a Laravel Model?
+In Laravel Eloquent models, the ```boot()``` method is used to hook into the model's lifecycle events — such as when a model is being created, updated, deleted, etc.
 #### 10. Why use Service and what is the benifit of it?
 #### 11. If by mistakely 2 Routes are exactly Same. then Explain what will do?
+__Ans:__ Laravel will use only the last defined route. The earlier route(s) with the same URI and method are overwritten silently.
 #### 12. Dependency Injection in laravel?
-    ans: When a class/interface use in a function parameter, this called Dependency Injection.
+__Ans:__ When a class/interface use in a function parameter, this called Dependency Injection.
 #### 13. Service provider and Service Container?
-    ans: 1. Service providers are the central place to configure your application. If you open the config/app. php file included with Laravel, you will see a providers array. These             are all of the service provider classes that will be loaded for your application.
-         2. The service providers in a Laravel application serve as the core point from which the application is bootstrapped. As a result, providers are used to inject laravel's               basic services into the service container as well as our application's services, classes, and their dependencies into the service container.
+__Ans:__ 
+1. Service providers are the central place to configure your application. If you open the ```config/app.php``` file included with Laravel, you will see a providers array. These             are all of the service provider classes that will be loaded for your application.
+2. The service providers in a Laravel application serve as the core point from which the application is bootstrapped. As a result, providers are used to inject laravel's               basic services into the service container as well as our application's services, classes, and their dependencies into the service container.
 #### 14. What's psr and psr4?
-    ans: PHP standart recomendation. PSR-4 (Autoloading Standard).  Learn...
-         1. https://www.php-fig.org/psr/psr-4/    2. https://www.specbee.com/blogs/introduction-php-standard-recommendation-psr
+__Ans:__ PHP standart recomendation. PSR-4 (Autoloading Standard).  Learn...
+1. https://www.php-fig.org/psr/psr-4/    
+2. https://www.specbee.com/blogs/introduction-php-standard-recommendation-psr
 #### 15. Laravel Magic methods Explaination?
-    ans:  Find the more Details and in below some method names are considered magical: 
+__Ans:__  Find the more Details and in below some method names are considered magical: 
 ```php
 __construct(), __destruct(), __call(), __callStatic(), __get(), __set(), __isset(), __unset(),
 __sleep(), __wakeup(), __serialize(), __unserialize(), __toString(), __invoke(), __set_state(),
 __clone(), and __debugInfo().
 ```
 #### 15. What is Trait and why it use for?
-    ans: Traits are a mechanism for code reuse in single inheritance languages such as PHP.
+__Ans:__ Traits are a mechanism for code reuse in single inheritance languages such as PHP.
 #### 16. What the deference between self:: and $this?
-    ans: 
+__Ans:__
   __self::__ is used to access class constants, static properties, and static methods within the context of the class itself. within the static method
 ```php
 class MyClass {
@@ -93,16 +114,17 @@ class MyClass {
 }
 ```
 #### 17. What is aggregate in Laravel?
-    ans:  Laravel includes aggregate functions such as max, min, count, average, and total
+__Ans:__  Laravel includes aggregate functions such as max, min, count, average, and total
 
 #### 18. When we should use query builder instead of Eloquent query?
-    Discussion: 
+__Discussion:__ 
     1. Lightweight Operations
     2. Complex SQL Queries
     3. Situations Where ORM Features Are Not Needed
-    
-    ans: When we want to store as it is to the database like,
- ```php   
+    4. Query Builder is faster because it avoids the overhead of Eloquent model instantiation.
+    5. Ideal for large data sets, like exporting 10,000+ rows or running aggregate reports.
+__Ans:__ When we want to store as it is to the database like,
+ ```php
 // This Originial Data that want to store
 '{"icon":"<i class=\"fab fa-telegram-plane\"><\/i>","title":"Official Channel","content":"https:\/\/t.me\/fxtraderswide"}'
   
@@ -128,3 +150,38 @@ try {
     // This block will catch both Exceptions and Errors, along with any other Throwable
 }
 ```
+
+#### 20. Global vs Local Scopes
+__Answer:__
+
+__Global__ scopes apply constraints to all queries of a model automatically (e.g. a “published” filter). Defined in the model’s booted() method.
+
+__Local__ scopes are reusable query constraints that are applied manually using methods like ```scopePopular()``` called via ```Model::popular()->get()```.
+
+#### 21. Repository Pattern & Action Classes
+__Answer:__
+
+__Repository Pattern__ abstracts data access into separate classes, decoupling business logic from persistence and making it easier to test. 
+SecondTalent
+
+__Action Classes__ focus on solo, single-purpose tasks (e.g., CreateUser), promoting SRP and clearer testing setups than bloated service classes.
+
+#### 22. Macros — extending Laravel dynamically
+__Answer:__ Thanks to the Macroable trait, you can add methods at runtime to classes like Collection, Request, etc. Typically registered in a service provider’s boot() method—perfect for reusable behaviors across your app.
+
+#### 23. Contracts vs Facades
+__Answer:__
+
+A Contract is a PHP interface defining a service (e.g., Queue) and encourages dependency injection via interface.
+
+A Facade is a static proxy to a service bound in the container (e.g., Queue::push()).
+Contracts define the “what”; facades define the “how” you access it. 
+SecondTalent
+
+#### 24. Feature Tests vs Unit Tests
+__Answer:__
+Unit Tests isolate a small part of the application—no framework bootstrapping.
+Feature Tests test integrated behavior via HTTP requests, controllers, and middleware. Use tests/Unit and tests/Feature accordingly.
+
+#### For Advance Question:
+https://www.secondtalent.com/interview-guide/php/?utm_source=chatgpt.com
